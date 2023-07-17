@@ -11,7 +11,3 @@ export const filterSlice = createSlice({
 });
 
 export const { changeFilter } = filterSlice.actions;
-
-// const changeFilter = event => {
-//     setFilter(event.target.value);
-// };

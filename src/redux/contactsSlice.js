@@ -53,26 +53,3 @@ export const contactsReducer = persistReducer(
 );
 
 export const { addContact, deleteContact } = contactsSlice.actions;
-
-//  const deleteContact = contactId => {
-//      setContacts(contacts.filter(item => item.id !== contactId));
-//  };
-
-// console.log(contactsSlice.actions.addContact({ name: 5, number: 6 }));
-// console.log(contactsSlice);
-
-// const addContact = (name, number) => {
-//     const contact = {
-//         id: nanoid(),
-//         name,
-//         number,
-//     };
-
-//     if (contacts.filter(item => item.name === contact.name).length) {
-//         return alert(`${contact.name} is already in contacts`);
-//     } else {
-//         setContacts(prevState => {
-//             return [...prevState, contact];
-//         });
-//     }
-// };

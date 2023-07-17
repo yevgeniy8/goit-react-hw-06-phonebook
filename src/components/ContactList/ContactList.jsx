@@ -1,4 +1,4 @@
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
 import {
     ContactListWrapper,
@@ -50,15 +50,14 @@ const ContactList = () => {
     );
 };
 
-// ContactList.propTypes = {
-//     vilibleContact: PropTypes.arrayOf(
-//         PropTypes.shape({
-//             id: PropTypes.string.isRequired,
-//             name: PropTypes.string.isRequired,
-//             number: PropTypes.string.isRequired,
-//         })
-//     ),
-//     deleteContact: PropTypes.func.isRequired,
-// };
+ContactList.propTypes = {
+    vilibleContact: PropTypes.arrayOf(
+        PropTypes.shape({
+            id: PropTypes.string.isRequired,
+            name: PropTypes.string.isRequired,
+            number: PropTypes.string.isRequired,
+        })
+    ),
+};
 
 export default ContactList;
