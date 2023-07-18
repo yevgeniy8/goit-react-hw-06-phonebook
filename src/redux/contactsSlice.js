@@ -18,9 +18,19 @@ export const contactsSlice = createSlice({
     reducers: {
         addContact: {
             reducer(state, action) {
-                return {
-                    contactsList: [...state.contactsList, action.payload],
-                };
+                if (
+                    state.contactsList.filter(
+                        item => item.name === action.payload.name
+                    ).length
+                ) {
+                    return alert(
+                        `${action.payload.name} is already in contacts`
+                    );
+                } else {
+                    return {
+                        contactsList: [...state.contactsList, action.payload],
+                    };
+                }
             },
             prepare({ name, number }) {
                 return {
@@ -53,3 +63,11 @@ export const contactsReducer = persistReducer(
 );
 
 export const { addContact, deleteContact } = contactsSlice.actions;
+
+// if (contacts.filter(item => item.name === contact.name).length) {
+//     return alert(`${contact.name} is already in contacts`);
+// } else {
+//     setContacts(prevState => {
+//         return [...prevState, contact];
+//     });
+// }
